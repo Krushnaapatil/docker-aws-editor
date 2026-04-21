@@ -42,7 +42,7 @@ function App() {
 
   useEffect(() => {
     if (username) {
-      const provider = new SocketIOProvider("http://localhost:3000", "monaco", ydoc, {  // ✅ fixed URL
+      const provider = new SocketIOProvider(window.location.origin, "monaco", ydoc, {  // ✅ fixed URL
         autoConnect: true,
       })
 
